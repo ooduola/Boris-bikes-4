@@ -11,5 +11,5 @@ A short program to emulate all the docking stations, bikes and infrastructure re
 
 Person --> Docking Station --> release_bike
                         
-Peroson --> bike --> is_working?
+Person --> bike --> is_working?
 
