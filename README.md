@@ -4,6 +4,12 @@ A short program to emulate all the docking stations, bikes and infrastructure re
 
 | Objects | Messages |
 |:------:|:------: |
-| Bike | Release| 
+| Docking Station | Release| 
 | Person |      |
 | Bike | Working |
+
+
+Person --> Docking Station --> release_bike
+                        
+Peroson --> bike --> is_working?
+
