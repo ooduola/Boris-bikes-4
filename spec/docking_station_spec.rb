@@ -8,6 +8,7 @@ describe DockingStation do
         expect(station.release_bike).to eq Bike
     end
     it 'bike.working?' do 
-        expect(Bike.working?).to eq true
+        bike = Bike.new
+        expect(bike.working?).to eq true
     end
 end
