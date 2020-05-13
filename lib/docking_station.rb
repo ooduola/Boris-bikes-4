@@ -1,4 +1,4 @@
-require_relative 'bike.'
+require './lib/bike'
 
 class DockingStation
   def release_bike
