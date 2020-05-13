@@ -1,7 +1,6 @@
 require 'bike'
 
 describe Bike do 
-  it 'expect bike to respond to working?' do
-    expect(Bike).to respond_to(:working?)
-  end
+  #expect Bike.new to respond to the method working?
+  it { is_expected.to respond_to(:working?) }
 end
