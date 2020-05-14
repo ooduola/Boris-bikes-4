@@ -16,7 +16,11 @@ class DockingStation
   end
 
   def dock_bike(bike)
-    @station = bike
+    if @station == nil
+      @station = bike
+    else
+      raise "No space"
+    end
   end
 
   def show
