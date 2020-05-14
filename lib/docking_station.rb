@@ -2,12 +2,17 @@ require './lib/bike'
 
 class DockingStation
   attr_reader :station
-  def initialize
-    @station
-  end
+   def initialize
+    @station = nil
+   end
 
   def release_bike
-    Bike.new
+    if @station == nil
+      raise "No bike available"
+    else
+      @station = nil
+      Bike.new
+    end
   end
 
   def dock_bike(bike)
