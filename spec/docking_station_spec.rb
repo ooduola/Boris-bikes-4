@@ -8,6 +8,10 @@ describe DockingStation do
         expect(bike).to be_working
     end
     it 'responds to dock_bike' do
-        expect(subject).to respond_to(:dock_bike)
+        expect(DockingStation.new).to respond_to(:dock_bike).with(1).argument
+    end
+
+    it 'responds to show' do
+        expect(subject).to respond_to (:show)
     end
 end
