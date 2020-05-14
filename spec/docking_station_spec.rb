@@ -25,12 +25,12 @@ subject(:docking_station) { described_class.new }
     end
 
     it 'raise an error when asked to release bike in an empty station' do
-    expect { DockingStation.new.release_bike }.to raise_error
+        expect { DockingStation.new.release_bike }.to raise_error
     end
 
     it 'raise an error when asked to dock a bike in a full station' do
-      docking_station.dock_bike(Bike.new)
-    expect { docking_station.dock_bike(Bike.new) }.to raise_error ("No space")
+        20.times { docking_station.dock_bike(Bike.new)}
+        expect { docking_station.dock_bike(Bike.new) }.to raise_error ("No space")
     end
 
 end

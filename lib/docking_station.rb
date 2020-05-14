@@ -3,23 +3,23 @@ require './lib/bike'
 class DockingStation
   attr_reader :station
    def initialize
-    @station = nil
+    @station = []
    end
 
   def release_bike
-    if @station == nil
+    if @station.empty? 
       raise "No bike available"
     else
-      @station = nil
+      @station.pop
       Bike.new
     end
   end
 
   def dock_bike(bike)
-    if @station == nil
-      @station = bike
-    else
+    if @station.length == 20
       raise "No space"
+    else
+      @station << bike
     end
   end
 
