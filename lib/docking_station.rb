@@ -2,18 +2,14 @@ require './lib/bike'
 
 class DockingStation
   attr_reader :station
-  #attr_reader :capacity
+  attr_reader :capacity
 
   DEFAULT_CAPACITY = 20
 
-   def initialize
+   def initialize(capacity=DEFAULT_CAPACITY)
     @station = []
-    @capacity = DEFAULT_CAPACITY
+    @capacity = capacity
    end
-
-  def capacity
-    @capacity
-  end
 
   def release_bike
       raise StopIteration if empty?
