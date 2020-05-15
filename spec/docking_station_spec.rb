@@ -4,7 +4,7 @@ require './lib/docking_station.rb'
 describe DockingStation do
 
   it 'can set capacity' do
-    expect(subject.capacity).to eq capacity
+    expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
   end
 
     it 'respond to #release_bike' do
