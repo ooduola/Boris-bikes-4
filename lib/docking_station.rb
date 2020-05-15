@@ -21,7 +21,7 @@ class DockingStation
 
   def show
     @station
-  end 
+  end
 
 private
 
@@ -32,5 +32,5 @@ private
   def empty?
     @station.length == 0
   end
-  
+
 end
