@@ -7,6 +7,10 @@ describe DockingStation do
     expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
   end
 
+  it ' initialize accepts an argument' do
+    expect(DockingStation).to respond_to(:new).with(1).argument
+  end
+
     it 'respond to #release_bike' do
         expect(subject).to respond_to(:release_bike)
     end
