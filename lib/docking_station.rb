@@ -9,13 +9,13 @@ class DockingStation
    end
 
   def release_bike
-      raise "No bike available" if empty?
+      raise StopIteration if empty?
       @station.pop
       Bike.new
   end
 
   def dock_bike(bike)
-      raise "No space" if full?
+      raise StopIteration if full?
       @station << bike
   end
 
