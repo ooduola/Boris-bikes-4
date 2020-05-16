@@ -1,11 +1,9 @@
 class Bike
-  def report_working?
-    #user_input = gets.chomp
+  def working?
     true
   end
 
-  def broken
+  def report_broken
 
-  end
-
+  end  
 end
