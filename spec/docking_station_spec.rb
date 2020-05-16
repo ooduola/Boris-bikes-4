@@ -20,7 +20,7 @@ describe DockingStation do
     end
 
     it 'responds to show' do
-        expect(subject).to respond_to (:show)
+        expect(subject).to respond_to(:show)
     end
 
     describe '#release_bike' do
@@ -34,7 +34,7 @@ describe DockingStation do
         end
     end
 
-    describe '#release_bike' do
+    describe '#dock_bike' do
         it 'raise specific error when station is full' do
             20.times { subject.dock_bike(Bike.new)}
             expect { subject.dock_bike(Bike.new) }.to raise_error(StopIteration)
